@@ -30,7 +30,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
 const images = ref([]);
-const index = ref(124);
+const index = ref(0);
 const value = ref('');
 const result = ref({});
 
@@ -55,7 +55,7 @@ const submit = () => {
 };
 
 onMounted(() => {
-  index.value = JSON.parse(localStorage.getItem("index")) || 124
+  index.value = JSON.parse(localStorage.getItem("index")) || 0
   result.value = JSON.parse(localStorage.getItem("result")) || {};
 })
 </script>
